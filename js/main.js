@@ -1,3 +1,14 @@
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show-fade");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden-fade");
+hiddenElements.forEach((el) => observer.observe(el));
+
 // js for navbar
 $(".navbar .lines").click(function (e) {
   e.preventDefault();
@@ -8,6 +19,21 @@ $(".navbar .lines").click(function (e) {
     $("body").addClass("navbar_active");
     $("body").addClass("disable_scroll");
   }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
 });
 
 $(".navbar .for_mobile ul .dropdown_li_sm a").click(function (e) {
@@ -43,7 +69,7 @@ $(".root").scroll(function () {
 
 // js for header
 $(".hero-slider").slick({
-  cssEase: "cubic-bezier(0.600, -0.400, 0.735, 0.045)",
+  // cssEase: "cubic-bezier(0.600, -0.400, 0.735, 0.045)",
   dots: true,
   arrows: false,
   infinite: true,
@@ -54,169 +80,31 @@ $(".hero-slider").slick({
   autoplaySpeed: 3000,
 });
 
-$("#typed").typed({
-  strings: ["great.", "something.", "everything."],
-  typeSpeed: 100,
-  startDelay: 0,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true,
-  cursorChar: "|",
-  contentType: "html",
-});
-// js for header
-
-// js for testimonials
-$(".testimonialSlider").slick({
-  arrows: false,
-  dots: true,
-  centerMode: true,
-  centerPadding: "60px",
-  variableWidth: true,
-  slidesToScroll: 1,
-  slidesToShow: 3,
-  infinite: true,
-  speed: 900,
-  cssEase: "linear",
-  responsive: [
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 1,
-        centerPadding: "0px",
-        variableWidth: false,
-      },
-    },
-  ],
-});
-$(window).resize(function () {
-  $(".testimonialSlider").slick("resize");
-});
-// js for testimonials end
-
-// js for partners
-$(".partnerSlider").slick({
-  arrows: false,
+// js for about us
+$(".about-us-slider").slick({
+  cssEase: "cubic-bezier(0.600, -0.400, 0.735, 0.045)",
   dots: false,
-  initialSlide: 0,
-  slidesToScroll: 1,
-  slidesToShow: 6,
+  arrows: false,
+  // prevArrow: $(".custom-prev"),
+  // nextArrow: $(".custom-next"),
   infinite: true,
-  speed: 900,
-  cssEase: "linear",
+  speed: 2500,
+  slidesToShow: 3,
+  adaptiveHeight: true,
   autoplay: true,
+  autoplaySpeed: 3000,
   responsive: [
     {
-      breakpoint: 1441,
-      settings: {
-        slidesToShow: 6,
-      },
-    },
-    {
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 4,
-      },
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 426,
+      breakpoint: 770,
       settings: {
         slidesToShow: 2,
       },
     },
+    {
+      breakpoint: 490,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
   ],
 });
-// js for partners end
-
-// about us counter
-jQuery(function ($) {
-  // Function which adds the 'animated' class to any '.animatable' in view
-  var startCounter = function () {
-    // Calc current offset and get all animatables
-    var offset = $(window).scrollTop() + $(window).height(),
-      $animatables = $(".counterSection");
-
-    // Unbind scroll handler if we have no animatables
-    if ($animatables.length == 0) {
-      $(window).off("scroll", startCounter);
-    }
-
-    // Check all animatables and animate them if necessary
-    $animatables.each(function (i) {
-      var $animatable = $(this);
-      if ($animatable.offset().top + $animatable.height() - 40 < offset) {
-        // $animatable.addClass("counterStart");
-        const counters = document.querySelectorAll(".counter");
-        const speed = 200; // The lower the slower
-
-        counters.forEach((counter) => {
-          const updateCount = () => {
-            const target = +counter.getAttribute("data-target");
-            const count = +counter.innerText;
-
-            // Lower inc to slow and higher to slow
-            const inc = target / speed;
-
-            var countedNumbers = 0;
-
-            // console.log(inc);
-            // console.log(count);
-
-            // Check if target is reached
-            if (count < target) {
-              // Add inc to count and output in counter
-              countedNumbers = count + inc;
-              counter.innerText = Math.ceil(countedNumbers);
-              // console.log(count);
-              // Call function every ms
-              setTimeout(updateCount, 30);
-            } else {
-              counter.innerText = parseInt(target);
-            }
-          };
-
-          updateCount();
-        });
-      }
-    });
-    var test = $(window).width();
-    if (test <= 768) {
-      $animatables.each(function (i) {
-        var $animatable = $(this);
-        if ($animatable.offset().top + $animatable.height() - 640 < offset) {
-          // $animatable.addClass("animationStart");
-        }
-      });
-    }
-  };
-
-  // Hook doAnimations on scroll, and trigger a scroll
-  $(".root").on("scroll", startCounter);
-  $(".root").trigger("scroll");
-});
-// about us counter end
-
-// faq
-$(".faq_card .question").click(function (e) {
-  e.preventDefault();
-
-  if ($(this).parent().hasClass("question_opened")) {
-    $(this).parent().removeClass("question_opened");
-    $(this).next().css("max-height", "0px");
-  } else {
-    $(".question_opened").find(".answer").css("max-height", "0px");
-    $(".question_opened").removeClass("question_opened");
-    $(this).parent().addClass("question_opened");
-    var heightinside = $(this).next().find(".inner").height() + 50;
-    $(this)
-      .next()
-      .css("max-height", heightinside + "px");
-  }
-});
-// faq end

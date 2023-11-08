@@ -1,6 +1,18 @@
 .contactSection {
   background-color: $lightbluebg;
   padding: 70px 0;
+  .wrapper {
+    > p {
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 80px;
+      font-weight: 400;
+      color: $secondary;
+      max-width: 900px;
+    }
+  }
   .line {
     width: 200px;
     height: 1px;
@@ -9,16 +21,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  p {
-    font-size: 15px;
-    letter-spacing: 2px;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 80px;
-    font-weight: 400;
-    color: $secondary;
-    max-width: 900px;
-  }
+
   h2 {
     color: $primary;
     font-weight: 700;
@@ -91,6 +94,7 @@
         }
         .submit-btn {
           button {
+            cursor: pointer;
             position: relative;
             padding: 10px 30px;
             overflow: hidden;
@@ -142,12 +146,23 @@
       width: 50%;
       position: relative;
       padding-left: 20px;
-      // margin-left: 30px;
-      h2 {
-        color: #2f2f2f;
+      p {
+        font-size: 15px;
+        text-align: left;
+        margin: auto;
+        margin-bottom: 15px;
+        font-weight: 400;
+        color: $black;
+        max-width: 900px;
         span {
-          color: #086ad8;
+          font-weight: 600;
         }
+      }
+      a {
+        text-decoration: none;
+        color: $secondary;
+        font-weight: 600;
+        margin-left: 3px;
       }
       &:before {
         content: "";
@@ -156,7 +171,7 @@
         top: 0%;
         left: 0;
         width: 4px;
-        height: 80%;
+        height: 100%;
         background-color: #086ad8;
       }
     }
@@ -165,18 +180,48 @@
     .contactLocation {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       .location {
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.25s ease-in;
+        gap: 10px;
+        &:nth-child(2) {
+          transition-delay: 200ms;
+        }
+        &:nth-child(3) {
+          transition-delay: 400ms;
+        }
+        &:nth-child(4) {
+          transition-delay: 600ms;
+        }
+        i {
+          font-size: 40px;
+          color: $secondary;
+        }
         h3 {
-          color: #2f2f2f;
-          margin-bottom: 10px;
+          color: $primary;
         }
         p {
-          font-size: 14px;
-          margin-bottom: 10px;
-          text-align: left;
-          letter-spacing: 0;
-          color: $primary;
+          text-align: center;
+        }
+        .company-info {
+          p {
+            text-align: left;
+            span {
+              font-weight: 500;
+              margin-right: 5px;
+            }
+          }
+        }
+        &:hover {
+          transition: all 0.25s ease-in;
+          transform: translateY(-10px);
+          box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
         }
       }
     }
@@ -249,9 +294,7 @@
   .contactSection .formHolder .moreInfo h2 {
     font-size: 24px;
   }
-  .contactSection p {
-    margin-bottom: 20px;
-  }
+
   .contactSection .formHolder .contactForm #contact-form-id {
     margin-top: 50px;
   }
@@ -259,7 +302,7 @@
     text-align: left;
   }
   .contactSection .formHolder {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .contactSection .moreInfo p {
     text-align: left;
@@ -278,5 +321,8 @@
   .contactSection .formHolder .contactForm #contact-form-id .firstRowForm {
     gap: 0px;
     flex-direction: column;
+  }
+  .contactSection .wrapper > p {
+    margin: auto auto 30px;
   }
 }

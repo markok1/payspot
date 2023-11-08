@@ -1,22 +1,19 @@
-//animation for ourservice boxes
-@keyframes borderRotate {
-  100% {
-    --angle: 420deg;
-  }
+.hidden-fade {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
 }
-
-//animation for purple circles in featured offers
-@keyframes purpleCircles {
-  20% {
-    border-radius: 45% 55% 62% 38%/53% 51% 49% 47%;
-  }
-  40% {
-    border-radius: 45% 55% 49% 51%/36% 51% 49% 64%;
-  }
-  60% {
-    border-radius: 60% 40% 57% 43%/47% 62% 38% 53%;
-  }
-  80% {
-    border-radius: 60% 40% 32% 68%/38% 36% 64% 62%;
+.hidden-fade--longer {
+  transition: all 2s;
+}
+.show-fade {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+@media (prefers-reduced-motion) {
+  .hidden-fade {
+    transition: none;
   }
 }

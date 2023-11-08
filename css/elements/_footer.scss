@@ -5,6 +5,16 @@
     // padding: 30px;
     padding: 0;
   }
+  .link-primary {
+    a {
+      background-image: linear-gradient(
+        to right,
+        $light,
+        $light 50%,
+        $light 50%
+      );
+    }
+  }
 }
 .footer_top {
   background-color: $primary;
@@ -16,25 +26,33 @@
 
   .box {
     width: calc(25% - 100px);
-
+    &:nth-child(2) {
+      transition-delay: 200ms;
+    }
+    &:nth-child(3) {
+      transition-delay: 400ms;
+    }
+    &:nth-child(4) {
+      transition-delay: 600ms;
+    }
     h2 {
       color: #fff;
-      font-size: 20px;
+      font-size: 18px;
       margin-top: 22px;
+      margin-bottom: 22px;
     }
-    .footer_link{
+    .footer_link {
       text-align: left;
     }
     a {
       color: #fff;
-      font-size: 17px;
+      font-size: 16px;
       text-decoration: none;
       // display: block;
-      margin-top: 22px;
     }
     p {
       color: #fff;
-      margin-top: 22px;
+      font-size: 14px;
     }
     h4 {
       color: #fff;
@@ -43,101 +61,51 @@
     }
     .social {
       display: flex;
-      justify-content: space-between;
       align-self: center;
-      max-width: 170px;
+      gap: 20px;
       width: 100%;
       margin-top: 22px;
       a {
         font-size: 0px;
         margin: 0;
-      }
-      img {
-        width: 30px;
-        height: 30px;
-        transition: 0.25s;
-        &:hover {
-          transform: translateY(-3px);
-        }
-      }
-    }
-    .rewievsicons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 22px;
-      max-width: 250px;
-      width: 100%;
-      flex-wrap: wrap;
-      .icon {
-        a {
-          text-decoration: none;
+        i {
+          font-size: 30px;
+          width: 50px;
+          height: 50px;
+          background-color: $secondary;
+          border: 2px solid $secondary;
           display: flex;
           align-items: center;
-          transition: 0.25s;
-          margin-right: 10px;
+          justify-content: center;
+          border-radius: 50%;
+          transition: all 0.25s ease-in;
           &:hover {
-            transform: translateY(-3px);
-          }
-          p {
-            margin: 0;
-          }
-          img {
-            width: 30px;
-            margin-right: 5px;
+            background-color: $light;
+            color: $secondary;
           }
         }
       }
     }
-  }
-}
-.footer_bottom {
-  max-width: 1000px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  justify-content: space-between;
-  p {
-    color: #040f23;
-    font-size: 15px;
-    opacity: 0.9;
-    span {
-      font-weight: 500;
-    }
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline-block;
-      padding: 5px 10px;
-      position: relative;
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      .link-primary {
+        text-align: left;
+      }
       a {
-        font-size: 15px;
-        color: #040f23;
-      }
-
-      &::after {
-        position: absolute;
-        height: 15px;
-        background-color: #040f23;
-        width: 2px;
-        right: 0px;
-        content: "";
-        top: 50%;
-        transform: translateY(-50%);
+        font-size: 14px;
+        font-weight: 600;
       }
     }
   }
 }
+
 @media only screen and (max-width: 1450px) {
   .footer_top .box {
     width: calc(25% - 70px);
   }
 }
 @media only screen and (max-width: 1200px) {
-
   .footer {
     padding: 0 !important;
   }
@@ -151,60 +119,24 @@
       font-size: 15px;
     }
   }
-  .footer_bottom {
-    flex-direction: column;
-    a {
-      font-size: 14px;
-    }
-    p {
-      font-size: 12px;
-      margin-top: 5px;
-    }
-    ul {
-      margin: auto;
-    }
-  }
-  .footer .footer_bottom p {
-    // color: #fff;
-    text-align: center;
-    font-size: 13px;
-  }
-  .footer_bottom, .footer_top{
+
+  .footer_top {
     padding: 15px;
   }
-  .footer_top{
+  .footer_top {
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  .footer_bottom{
-    text-align: center;
-  }
-  .footer_top .box:last-child{
+
+  .footer_top .box:last-child {
     margin-bottom: 0;
-  }
-  .footer .footer_bottom .social {
-    max-width: 130px;
-    img {
-      height: 25px;
-      width: 25px;
-    }
   }
 }
 @media only screen and (max-width: 600px) {
-
   .footer_top {
     display: block;
   }
   .footer_top .box {
     width: 100%;
-  }
-  .footer_bottom ul li a {
-    font-size: 14px;
-    color: #040f23;
-  }
-  .footer_bottom p {
-    font-size: 9px;
-    margin-top: 13px;
-    padding: 0px 10px;
   }
 }

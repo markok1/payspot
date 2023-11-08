@@ -3,7 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0px;
+  padding: 100px 0px 50px 0px;
   p {
     color: $black;
   }
@@ -51,6 +51,21 @@
   gap: 20px;
   padding: 10px;
   transition: all 0.25s ease-in;
+  &:nth-child(2) {
+    transition-delay: 200ms;
+  }
+  &:nth-child(3) {
+    transition-delay: 400ms;
+  }
+  &:nth-child(4) {
+    transition-delay: 600ms;
+  }
+  &:nth-child(5) {
+    transition-delay: 800ms;
+  }
+  &:nth-child(6) {
+    transition-delay: 1000ms;
+  }
   i {
     color: $primary;
     font-size: 62px;

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta
+      name="description"
+      content="Since February 2023, PaySpot DOO has been an electronic money institution and was the first company in Serbia to enable payment transactions outside the ..."
+    />
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -20,7 +23,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <!-- slick slider -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -62,7 +65,7 @@
       </div>
       <nav class="navbar">
         <div class="wrapper">
-          <img src="img/logo.png" class="logo" alt="" />
+          <img src="img/logo.png" class="logo" alt="PaySpot ME logo" />
 
           <div class="lines">
             <div class="line"></div>
@@ -72,9 +75,9 @@
 
           <div class="for_mobile">
             <ul>
-              <li><a href="">O nama</a></li>
+              <li><a href="#about-us">O nama</a></li>
               <li class="dropdown_li_sm">
-                <a href=""
+                <a href="#usluge"
                   >Usluge <img src="img/downchevron.svg" alt="Down chevron"
                 /></a>
                 <div class="dropdown_smaller">
@@ -102,7 +105,7 @@
                   </div>
                 </div>
               </li>
-              <li><a href="">Kontakt</a></li>
+              <li><a href="#contactus">Kontakt</a></li>
               <li class="dropdown_li_sm language-picker">
                 <a href="">
                   <img
@@ -187,11 +190,14 @@
           <div class="hero-slider">
             <div class="slider">
               <div class="slider-background">
-                <img src="img/hero-slider1.jpg" alt="Hero bg" />
+                <img
+                  src="img/hero-slider1.jpg"
+                  alt="Girl holding a payspot card"
+                />
               </div>
               <div class="wrapper">
                 <div class="slider-content">
-                  <h1>
+                  <h1 class="hidden-fade">
                     Payspot je sada
                     <span
                       >Institucija <br />
@@ -203,10 +209,10 @@
             </div>
             <div class="slider">
               <div class="slider-background">
-                <img src="img/hero-slider2.jpg" alt="Hero bg" />
+                <img src="img/hero-slider2.jpg" alt="All services preview" />
               </div>
               <div class="wrapper">
-                <div class="slider-content">
+                <div class="slider-content hidden-fade hidden-fade--longer">
                   <p>Nase usluge</p>
                   <h1>Sve na dlanu <span>PaySpot usluge</span></h1>
                   <p>
@@ -226,10 +232,13 @@
             </div>
             <div class="slider">
               <div class="slider-background">
-                <img src="img/hero-slider3.png" alt="Hero bg" />
+                <img
+                  src="img/hero-slider3.png"
+                  alt="Location of payspot shops"
+                />
               </div>
               <div class="wrapper">
-                <div class="slider-content">
+                <div class="slider-content hidden-fade hidden-fade--longer">
                   <p>Institucija elektronskog novca</p>
                   <h1>
                     PaySpot lider<span
@@ -254,10 +263,13 @@
             </div>
             <div class="slider">
               <div class="slider-background">
-                <img src="img/hero-slider4.jpg" alt="Hero bg" />
+                <img
+                  src="img/hero-slider4.jpg"
+                  alt="PaySpot workers having a discussion"
+                />
               </div>
               <div class="wrapper">
-                <div class="slider-content">
+                <div class="slider-content hidden-fade hidden-fade--longer">
                   <p>Mi zelimo da vi uspete</p>
                   <h1>
                     Pruzamo ruku<span
@@ -279,15 +291,15 @@
             </div>
           </div>
         </div>
-        <div class="what-we-offer">
+        <div id="usluge" class="what-we-offer">
           <div class="wrapper">
             <div class="title-area">
-              <div class="box">
-                <h2>Sve na dlanu</h2>
+              <div class="box hidden-fade">
                 <h1>Sve PaySpot Usluge</h1>
+                <h2>Sve na dlanu</h2>
                 <div class="line"></div>
               </div>
-              <div class="box">
+              <div class="box hidden-fade">
                 <p>
                   Sarađujemo sa svetskim tržišnim liderima i ponosni smo što,
                   kao domaća kompanija, možemo našim građanima da ponudimo
@@ -296,7 +308,7 @@
               </div>
             </div>
             <div class="items">
-              <div class="item">
+              <div class="item hidden-fade">
                 <div class="place-for-img">
                   <div class="forhover">
                     <div class="line"></div>
@@ -305,7 +317,10 @@
                     <div class="line"></div>
                   </div>
                   <div class="inside">
-                    <img src="img/platni-promet.png" alt="" />
+                    <img
+                      src="img/platni-promet.png"
+                      alt="Women holding a taxfree sign and a paper"
+                    />
                   </div>
                 </div>
                 <div class="cont">
@@ -322,7 +337,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item ubrzo-box">
+              <div class="item ubrzo-box hidden-fade">
                 <div class="place-for-img">
                   <div class="forhover">
                     <div class="line"></div>
@@ -331,7 +346,10 @@
                     <div class="line"></div>
                   </div>
                   <div class="inside">
-                    <img src="img/uplata-pazara.png" alt="" />
+                    <img
+                      src="img/uplata-pazara.png"
+                      alt="Singing up the payment"
+                    />
                   </div>
                 </div>
                 <div class="cont">
@@ -351,7 +369,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item ubrzo-box">
+              <div class="item ubrzo-box hidden-fade">
                 <div class="place-for-img">
                   <div class="forhover">
                     <div class="line"></div>
@@ -362,7 +380,7 @@
                   <div class="inside">
                     <img
                       src="img/Prenos-novčanih-sredstava-u-zemlji-PaySpot.png"
-                      alt=""
+                      alt="Money prepared for the transfer"
                     />
                   </div>
                 </div>
@@ -381,7 +399,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item ubrzo-box">
+              <div class="item ubrzo-box hidden-fade">
                 <div class="place-for-img">
                   <div class="forhover">
                     <div class="line"></div>
@@ -392,7 +410,7 @@
                   <div class="inside">
                     <img
                       src="img/Medjunarodni-transfer-novca-RIA-money-transfer.png"
-                      alt=""
+                      alt="Family happily transfering money"
                     />
                   </div>
                 </div>
@@ -419,12 +437,12 @@
         <div class="become-agent">
           <div class="wrapper">
             <div class="agent-top">
-              <p class="subtitle">Možemo unaprediti vaš biznis</p>
-              <h1>
+              <p class="subtitle hidden-fade">Možemo unaprediti vaš biznis</p>
+              <h1 class="hidden-fade">
                 Postani <br />
-                <span>PaySpot zastupnik</span>
+                <span>PaySpot agent</span>
               </h1>
-              <p>
+              <p class="hidden-fade">
                 PaySpot doo Novi Sad sa razlogom nazivaju liderom u obavljanju
                 platnih usluga.
                 <br />
@@ -432,10 +450,10 @@
                 pružajući klijentima platne usluge transfera novca, kao i brzog
                 i lakog plaćanja računa.
               </p>
-              <p>Bez ulaganja ostvarite dodatnu zaradu.</p>
+              <p class="hidden-fade">Bez ulaganja ostvarite dodatnu zaradu.</p>
             </div>
             <div class="agent-boxes">
-              <div class="agent-box">
+              <div class="agent-box hidden-fade">
                 <i class="fa-solid fa-sack-dollar"></i>
                 <div class="box-content">
                   <h2>Plaćanje računa</h2>
@@ -445,7 +463,7 @@
                   </p>
                 </div>
               </div>
-              <div class="agent-box">
+              <div class="agent-box hidden-fade">
                 <i class="fa-solid fa-piggy-bank"></i>
                 <div class="box-content">
                   <h2>Bez ulaganja</h2>
@@ -454,7 +472,7 @@
                   </p>
                 </div>
               </div>
-              <div class="agent-box">
+              <div class="agent-box hidden-fade">
                 <i class="fa-solid fa-money-bill-trend-up"></i>
                 <div class="box-content">
                   <h2>Dodatni prihod</h2>
@@ -464,7 +482,7 @@
                   </p>
                 </div>
               </div>
-              <div class="agent-box">
+              <div class="agent-box hidden-fade">
                 <i class="fa-solid fa-landmark"></i>
                 <div class="box-content">
                   <h2>Proširite ponudu</h2>
@@ -474,14 +492,14 @@
                   </p>
                 </div>
               </div>
-              <div class="agent-box">
+              <div class="agent-box hidden-fade">
                 <i class="fa-solid fa-people-group"></i>
                 <div class="box-content">
                   <h2>Budite deo tima</h2>
                   <p>Postanite deo uspešnog tima kompanije PaySpot.</p>
                 </div>
               </div>
-              <div class="agent-box">
+              <div class="agent-box hidden-fade">
                 <i class="fa-solid fa-chart-column"></i>
                 <div class="box-content">
                   <h2>Trend</h2>
@@ -491,109 +509,672 @@
             </div>
           </div>
         </div>
-        <!-- 
+        <div id="about-us" class="about-us">
+          <div class="wrapper">
+            <div class="about-us-top">
+              <p class="subtitle hidden-fade">Lider platnih usluga</p>
+              <h2 class="hidden-fade">
+                Među prvima smo uveli:
+                <span>Platni promet i novčane doznake</span>
+              </h2>
+            </div>
+            <div class="about-us-content">
+              <div class="content-box hidden-fade">
+                <p>
+                  Danas smo kompanija koja ima potpisane ugovore sa dve najveće
+                  svetske kompanije za međunarodnu doznaku – transfer novca –
+                  RIA Transfer Money (USA) i KORONAPAY EUROPE LTD International
+                  Money transfer (Kipar).
+                </p>
+              </div>
+              <div class="content-box hidden-fade">
+                <p>
+                  Uspešno sarađujemo sa velikim brojem poslovnih banaka u Srbiji
+                  – OTP Banka, Aik Banka, Addiko Banka, Erste banka, Direktna
+                  banka, Komercijalna banka, Poštanska štedionica, kao i sa svim
+                  osiguravajućim kućama koje posluju u našoj zemlji.
+                  <br />
+                  <br />
+                  PaySpot danas u Srbiji ima mrežu od preko 1300 zastupnika koji
+                  su u prilici da u okviru svog biznisa, svojim klijentima
+                  ponude platnog prometa. Zato možemo da kažemo da smo: „Vaš
+                  dobar komšija“.
+                </p>
+              </div>
+              <div class="content-box stat-box hidden-fade">
+                <div class="stat">
+                  <p>Transfer novca</p>
+                  <div class="stat-lines">
+                    <div class="gray-line"></div>
+                    <div class="red-line"></div>
+                  </div>
+                </div>
+                <div class="stat">
+                  <p>Zadovoljstvo klijenata</p>
+                  <div class="stat-lines">
+                    <div class="gray-line"></div>
+                    <div class="red-line"></div>
+                  </div>
+                </div>
+                <div class="stat">
+                  <p>Razvijanje biznisa</p>
+                  <div class="stat-lines">
+                    <div class="gray-line"></div>
+                    <div class="red-line"></div>
+                  </div>
+                </div>
+                <div class="stat">
+                  <p>Edukacija korisnika</p>
+                  <div class="stat-lines">
+                    <div class="gray-line"></div>
+                    <div class="red-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-holder">
+              <div class="about-us-slider">
+                <div class="about-slide">
+                  <img
+                    src="img/o-nama-slajd1.png"
+                    alt="PaySpot cuts being helf by workers"
+                  />
+                </div>
+                <div class="about-slide">
+                  <img
+                    src="img/o-nama-slajd2.png"
+                    alt="Payspot worker helping a customer"
+                  />
+                </div>
+                <div class="about-slide">
+                  <img
+                    src="img/o-nama-slajd3.png"
+                    alt="Happy customer talking with payspot worker"
+                  />
+                </div>
+                <div class="about-slide">
+                  <img src="img/o-nama-slajd4.png" alt="Payspot team working" />
+                </div>
+                <div class="about-slide">
+                  <img
+                    src="img/o-nama-slajd5.png"
+                    alt="Payspot consultations going over informations"
+                  />
+                </div>
+                <div class="about-slide">
+                  <img
+                    src="img/o-nama-slajd6.png"
+                    alt="Payspot worker working on the PC"
+                  />
+                </div>
+                <div class="about-slide">
+                  <img
+                    src="img/o-nama-slajd7.png"
+                    alt="Payspot menagement going over books"
+                  />
+                </div>
+              </div>
+              <!-- <button class="custom-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="custom-next">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button> -->
+            </div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="wrapper">
+            <div class="timeline__block hidden-fade">
+              <div
+                class="timeline__midpoint timeline__midpoint--highlight no-top-margin"
+              >
+                <h3 class="timeline__year">2015</h3>
+              </div>
+              <div class="timeline__content timeline__content--right">
+                <h3 class="timeline__year timeline__year--mobile">2015</h3>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div class="timeline__midpoint midpoint--left"></div>
+              <div class="timeline__content timeline__content--left">
+                <div class="timeline__text--left timeline-content-box">
+                  <p class="top-date">Decembar 2015</p>
+                  <h2>Osnovan PaySpot</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img src="img/timeline1.jpg" alt="Payspot office" />
+                    </div>
+                    <p>
+                      Pred sam kraj godine registracija u agenciji za privredne
+                      registre i zvaničan početak PaySpot doo
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div
+                class="timeline__midpoint timeline__midpoint--highlight no-top-margin"
+              >
+                <h3 class="timeline__year">2016</h3>
+              </div>
+              <div class="timeline__content timeline__content--left">
+                <h3 class="timeline__year timeline__year--mobile">2016</h3>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div class="timeline__midpoint midpoint--left"></div>
+              <div class="timeline__content timeline__content--left">
+                <div class="timeline__text--left timeline-content-box">
+                  <p class="top-date">Maj 2016</p>
+                  <h2>Dozvola za pružanje platnih usluga</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img
+                        src="img/timeline2.jpg"
+                        alt="Payspot workers making deals"
+                      />
+                    </div>
+                    <p>
+                      Izvršni odbor Narodne banke Srbije (NBS) doneo je odluku
+                      da PaySpot dobije dozvolu za pružanje platnih usluga i na
+                      taj način ostvari mogućnost da se registruje kao Platna
+                      institucija i počne sa pružanjem najsavremenijih vrsta
+                      platnih usluga preko mreže svojih zastupnika.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div class="timeline__midpoint midpoint--right"></div>
+              <div class="timeline__content timeline__content--right">
+                <div class="timeline__text--right timeline-content-box">
+                  <p class="top-date">Novembar 2016</p>
+                  <h2>100 uplatnih mesta</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img
+                        src="img/timeline3.jpg"
+                        alt="Payspot worker taking the transaction"
+                      />
+                    </div>
+                    <p>
+                      PaySpot je krajem novembra 2016. godine došao do 100
+                      uplatnih mesta.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div
+                class="timeline__midpoint timeline__midpoint--highlight no-top-margin"
+              >
+                <h3 class="timeline__year">2017</h3>
+              </div>
+              <div class="timeline__content timeline__content--right">
+                <h3 class="timeline__year timeline__year--mobile">2017</h3>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div class="timeline__midpoint midpoint--left"></div>
+              <div class="timeline__content timeline__content--left">
+                <div class="timeline__text--left timeline-content-box">
+                  <p class="top-date">Septembar 2017</p>
+                  <h2>Predstavnik za Ria Money transfer</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img src="img/timeline4.png" alt="Wallet on the map" />
+                    </div>
+                    <p>
+                      Platna institucija PaySpot postala je predstavnik Ria
+                      Money transfer / RIA transfer novca za Srbiju. Zastupnici
+                      PaySpot-a dobili su mogućnost da vrše isplatu primljenih
+                      Ria novčanih doznaka i slanja doznaka u inostranstvo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div class="timeline__midpoint midpoint--right"></div>
+              <div class="timeline__content timeline__content--right">
+                <div class="timeline__text--right timeline-content-box">
+                  <p class="top-date">Septembar 2017</p>
+                  <h2>Pružanje usluge PaySpot.Net</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img
+                        src="img/timeline5.jpg"
+                        alt="Money spread out nicely"
+                      />
+                    </div>
+                    <p>
+                      Platna institucija PaySpot počela je sa pružanjem usluge
+                      PaySpot Net – izvršavanja novčane doznake u zemlji. U
+                      pitanju je transakcija transfera novca kod koje jedno
+                      fizičko lice iz Srbije, šalje novac drugom fizičkom licu,
+                      takođe u Srbiji.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div
+                class="timeline__midpoint timeline__midpoint--highlight no-top-margin"
+              >
+                <h3 class="timeline__year">2019</h3>
+              </div>
+              <div class="timeline__content timeline__content--right">
+                <h3 class="timeline__year timeline__year--mobile">2019</h3>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div class="timeline__midpoint midpoint--left"></div>
+              <div class="timeline__content timeline__content--left">
+                <div class="timeline__text--left timeline-content-box">
+                  <p class="top-date">Jul 2019</p>
+                  <h2>1.000 aktivnih uplatnih mesta</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img
+                        src="img/timeline6.jpg"
+                        alt="Payspot worker happily taking money for transaction"
+                      />
+                    </div>
+                    <p>
+                      U julu 2019. godine smo prešli broj od 1.000 aktivnih
+                      uplatnih mesta na teritoriji Republike Srbije.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div
+                class="timeline__midpoint timeline__midpoint--highlight no-top-margin"
+              >
+                <h3 class="timeline__year">2020</h3>
+              </div>
+              <div class="timeline__content timeline__content--right">
+                <h3 class="timeline__year timeline__year--mobile">2020</h3>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div class="timeline__midpoint midpoint--right"></div>
+              <div class="timeline__content timeline__content--right">
+                <div class="timeline__text--right timeline-content-box">
+                  <p class="top-date">Januar 2020</p>
+                  <h2>Preko 100 zaposlenih</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img
+                        src="img/timeline7.jpg"
+                        alt="Payspot workers happily talking over a cup of coffe"
+                      />
+                    </div>
+                    <p>
+                      Od januara 2020. godine PaySpot platna institucija
+                      zapošljava preko 100 zaposlenih. Od nekoliko zaposlenih
+                      početkom 2017. došli smo do 100 za nepune tri godine.
+                      Kolektiv koji smo izgradili je naš najvažniji resurs i
+                      najveći uspeh!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div
+                class="timeline__midpoint timeline__midpoint--highlight no-top-margin"
+              >
+                <h3 class="timeline__year">2022</h3>
+              </div>
+              <div class="timeline__content timeline__content--right">
+                <h3 class="timeline__year timeline__year--mobile">2022</h3>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div class="timeline__midpoint midpoint--left"></div>
+              <div class="timeline__content timeline__content--left">
+                <div class="timeline__text--left timeline-content-box">
+                  <p class="top-date">Novembar 2022</p>
+                  <h2>Žena zmaj</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img src="img/timeline8.png" alt="Women awards" />
+                    </div>
+                    <p>
+                      Direktorka PaySpot platne institucije Dubravka Bjekić
+                      dobija prestižnu titulu: “Žena zmaj, koju uručuje
+                      udruženje Poslovnih ćena Srbije. Kompanija sada broji
+                      preko 190 zaposlenih i intezivno radi na razvoju platnih
+                      rešenja.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div
+                class="timeline__midpoint timeline__midpoint--highlight no-top-margin"
+              >
+                <h3 class="timeline__year">2023</h3>
+              </div>
+              <div class="timeline__content timeline__content--right">
+                <h3 class="timeline__year timeline__year--mobile">2023</h3>
+              </div>
+            </div>
+
+            <div class="timeline__block hidden-fade">
+              <div
+                class="timeline__midpoint midpoint--left last-midpoint"
+              ></div>
+              <div class="timeline__content timeline__content--left">
+                <div class="timeline__text--left timeline-content-box">
+                  <p class="top-date">Februar 2023</p>
+                  <h2>Institucija elektronskog novca</h2>
+                  <div class="timeline-content">
+                    <div class="content-left">
+                      <img
+                        src="img/timeline9.jpg"
+                        alt="Payspot worker working on the laptop"
+                      />
+                    </div>
+                    <p>
+                      U februaru 2023. Godine PaySpot postaje Institucija
+                      elektronskog novca, kao prva platna institucija koja je
+                      dobila rešenje narodne Banke Srbije.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="contactus" class="contactSection">
+          <div class="wrapper">
+            <h2 class="hidden-fade">Kontaktirajte nas</h2>
+            <div class="line hidden-fade"></div>
+            <p class="hidden-fade">
+              Vaše mišljenje, sugestije i pitanja možete uputiti PaySpot-u:
+            </p>
+            <div class="formHolder hidden-fade">
+              <div class="contactForm">
+                <form id="contact-form-id" action="php/mail.php" method="post">
+                  <div class="firstRowForm">
+                    <input
+                      name="con_name"
+                      type="text"
+                      placeholder="Unesite vase ime *"
+                      required="required"
+                    />
+                    <input
+                      name="con_email"
+                      type="email"
+                      placeholder="Unesite vas email *"
+                      required="required"
+                    />
+                  </div>
+                  <div class="secondRowForm">
+                    <input
+                      name="con_subject"
+                      type="text"
+                      placeholder="Naziv poruke *"
+                      required="required"
+                    />
+                  </div>
+                  <div class="contact-message">
+                    <textarea
+                      name="con_message"
+                      placeholder="Unesite vasu poruku *"
+                    ></textarea>
+                  </div>
+                  <div class="submit-btn">
+                    <button class="" type="submit">Posaljite poruku</button>
+                    <p class="form-messege"></p>
+                  </div>
+                </form>
+              </div>
+              <div class="moreInfo">
+                <p class="hidden-fade">
+                  <span>Telefon:</span><a href="+38121310 3000">021/310 3000</a>
+                </p>
+                <p class="hidden-fade">
+                  <span>e-mail:</span>
+                  <a href="mailto:reklamacije@payspot.co.rs"
+                    >reklamacije@payspot.co.rs</a
+                  >
+                </p>
+                <p class="hidden-fade">
+                  Ukoliko želite da podnesete Prigovor na rad Institucije
+                  elektronskog novca i usluga koje pružamo, informišite se putem
+                  <a
+                    href="https://www.payspot.rs/wp-content/uploads/2023/09/OBAVESTENJE-O-NACINU-PODNOSENJA-PRIGOVORA-KORISNIKA-V09-16.09.2023.pdf"
+                    >Obaveštenja o načinu podnošenja prigovora korisnika
+                    finansijskih usluga.</a
+                  >
+                </p>
+                <p class="hidden-fade">
+                  Prigovor možete podneti putem <span>e-mail adrese</span>:<a
+                    href="mailto:prigovori@payspot.co.rs"
+                    >prigovori@payspot.co.rs</a
+                  >
+                </p>
+                <p class="hidden-fade">
+                  ili pismeno, putem
+                  <a
+                    href="https://www.payspot.rs/wp-content/uploads/2023/09/ZAHTEV-ZA-PODNOSENJE-PRIGOVORA-21.02.2023._editovano.pdf"
+                    >Zahteva za podnošenje prigovora.</a
+                  >
+                </p>
+                <p class="hidden-fade">
+                  Vaš pisani prigovor možete ostaviti kod bilo kog zastupnika
+                  institucije elektronskog novca
+                  <a href="https://www.payspot.rs/kontakt/">PaySpot</a>ili ih
+                  poslati poštom na adresu:
+                  <span
+                    >PaySpot doo Novi Sad, Branimira Ćosića 2/II/201b, 21000
+                    Novi Sad.</span
+                  >
+                </p>
+                <p class="hidden-fade">
+                  Platna institucija nije u obavezi da reaguje na usmene
+                  prigovore.
+                </p>
+                <p class="hidden-fade">
+                  <span
+                    >O pravima uzbunjivača, postupku uzbunjivanja kao i o drugim
+                    pitanjima od značaja za uzbunjivanje i zaštitu uzbunjivača,
+                    informišite se u</span
+                  >
+                  <a
+                    href="https://www.payspot.rs/wp-content/uploads/2023/05/Obavestenje-o-pravima-uzbunjivaca-V06-1.pdf"
+                    >Obaveštenju o pravima uzbunjivača koja su predviđena
+                    Zakonom o zaštiti uzbunjivača.</a
+                  >
+                </p>
+                <p class="hidden-fade">
+                  <span>Možete nas kontaktirati i putem e-mail adrese: </span>
+                  <a href="mailto:kontrola@payspot.co.rs"
+                    >kontrola@payspot.co.rs</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contactFooter">
+              <div class="contactLocation">
+                <div class="location hidden-fade">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <h3>Adresa</h3>
+                  <p>
+                    Branimira Ćosića 2/II/201b <br />
+                    Novi Sad Srbija 21000
+                  </p>
+                </div>
+                <div class="location hidden-fade">
+                  <i class="fa-solid fa-phone-volume"></i>
+                  <h3>Telefon</h3>
+                  <p>+ 381 (0)21 310 3000</p>
+                </div>
+                <div class="location hidden-fade">
+                  <i class="fa-solid fa-at"></i>
+                  <h3>Email</h3>
+                  <p>office@payspot.co.rs</p>
+                </div>
+                <div class="location hidden-fade">
+                  <i class="fa-solid fa-building"></i>
+                  <h3>Podaci kompanije</h3>
+                  <div class="company-info">
+                    <p><span>PIB:</span>109296534</p>
+                    <p><span>MB:</span>21157074</p>
+                    <p><span>Šifra delatnosti:</span>6419</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <form id="contact-form" action="http://whizthemes.com/mail-php/jowel/mitech/php/mail.php" method="post"> -->
+          </div>
+        </div>
+
         <div class="footer">
           <div class="wrapper">
             <div class="footer_top">
-              <div class="box">
-                <img src="img/logo.png" alt="" />
+              <div class="box hidden-fade">
+                <h2>Institucija elektronskog novca</h2>
                 <p>
-                  A-racun is a system that is all you need for the process of
-                  online electronic fiscalization in your country.
+                  Prioritet institucije elektronskog novca PaySpot su poverenje
+                  i zadovoljstvo korisnika
                 </p>
+                <div class="link-primary">
+                  <a href="tel:+3810213103000"
+                    ><i class="fa-solid fa-phone"></i> + 381 (0)21 310 3000</a
+                  >
+                </div>
+                <div class="link-primary">
+                  <a href="mailto:office@payspot.co.rs"
+                    ><i class="fa-regular fa-envelope"></i>
+                    office@payspot.co.rs</a
+                  >
+                </div>
+                <div class="link-primary">
+                  <a href="www.payspot.rs"
+                    ><i class="fa-solid fa-globe"></i> www.payspot.rs</a
+                  >
+                </div>
+
                 <div class="social">
-                  <a href=""><img src="img/instagramicon2.png" alt="" /></a>
-                  <a href=""><img src="img/facebookicon2.png" alt="" /></a>
-                  <a href=""><img src="img/twitericon2.png" alt="" /></a>
-                </div>
-                <h4>See our reviews on</h4>
-                <div class="rewievsicons">
-                  <div class="icon">
-                    <a href="">
-                      <img src="img/trustpiloticon.png" alt="" />
-                      <p>Trustpilot</p></a
-                    >
-                  </div>
-                  <div class="icon">
-                    <a href=""
-                      ><img src="img/capterra.png" alt="" />
-                      <p>Capterra</p></a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <h2>Product</h2>
-                <div class="link-primary footer_link">
-                  <a href="">Features</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Agencies</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Security Audits</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Hacked Websites</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Security Audits</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Hacked Websites</a>
+                  <a href="https://www.facebook.com/payspotnovisad/"
+                    ><i
+                      aria-hidden="true"
+                      alt="facebook"
+                      class="fa-brands fa-facebook-f"
+                    ></i
+                    ><span class="sr-only">Visit our Facebook page</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/payspot-d.o.o.-novi-sad/?trk=similar-companies_org_title"
+                    ><i
+                      aria-hidden="true"
+                      alt="linkedin"
+                      class="fa-brands fa-linkedin-in"
+                    ></i>
+                    <span class="sr-only">Visit our Linkedin page</span></a
+                  >
+                  <a href="https://www.instagram.com/payspot_srbija/"
+                    ><i
+                      aria-hidden="true"
+                      alt="instagram"
+                      class="fa-brands fa-instagram"
+                    ></i
+                    ><span class="sr-only">Visit our Instagram page</span></a
+                  >
                 </div>
               </div>
-              <div class="box">
-                <h2>Company</h2>
-                <div class="link-primary footer_link"><a href="">About</a></div>
+              <div class="box hidden-fade">
+                <h2>Partneri</h2>
                 <div class="link-primary footer_link">
-                  <a href="">Customers</a>
+                  <a href="">Parter</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Careers</a>
+                  <a href="">Parter</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Contact Us</a>
+                  <a href="">Parter</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Security Audits</a>
+                  <a href="">Parter</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Hacked Websites</a>
-                </div>
-              </div>
-              <div class="box">
-                <h2>Resources</h2>
-                <div class="link-primary footer_link">
-                  <a href="">Website Scanners</a>
+                  <a href="">Parter</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">E-commerce</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Careers</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Contact Us</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Security Audits</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Hacked Websites</a>
+                  <a href="">Parter</a>
                 </div>
               </div>
-            </div>
-            <div class="footer_bottom">
-              <ul>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Terms of Service</a></li>
-                <li><a href="">Report a vulnerability</a></li>
-              </ul>
-              <p>Copyright @ 2023 <span> A RACUN</span> All Rights Reserved.</p>
+              <div class="box hidden-fade">
+                <h2>Dokumentacija</h2>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija1</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija2</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija3</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija4</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija5</a>
+                </div>
+              </div>
+              <div class="box hidden-fade">
+                <h2>Dokumentacija</h2>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija</a>
+                </div>
+                <div class="link-primary footer_link">
+                  <a href="">Dokumentacija</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
 

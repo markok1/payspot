@@ -81,6 +81,15 @@
       -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
+      &:nth-child(2) {
+        transition-delay: 0.4s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.8s;
+      }
+      &:nth-child(4) {
+        transition-delay: 1.2s;
+      }
     }
     .ubrzo-box {
       position: relative;
@@ -195,7 +204,6 @@
       }
       p {
         color: $primary;
-        opacity: 0.7;
         font-size: 16px;
         max-width: 500px;
         margin-top: 10px;
