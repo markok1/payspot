@@ -325,7 +325,6 @@ a {
 
 .dropdown_smaller {
   background-color: #fff;
-  width: 300px;
   position: absolute;
   top: 100px;
   left: 0;
@@ -336,10 +335,11 @@ a {
   transition: all ease 0.25s;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.12);
 }
-.dropdown_smaller .wrapper {
+.dropdown_smaller > .wrapper {
   max-width: unset;
   width: unset;
   padding: 0px;
+  min-height: unset;
 }
 .dropdown_smaller ul {
   position: relative;
@@ -376,6 +376,9 @@ a {
   width: 10px;
   transition: all ease 0.25s;
 }
+.dropdown_smaller ul li .uskoro {
+  width: 90%;
+}
 .dropdown_smaller ul li .uskoro::after {
   display: flex;
   align-items: center;
@@ -395,12 +398,44 @@ a {
   transition: all ease 0.25s;
 }
 
+.sub-menu:hover .extended-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.extended-dropdown {
+  overflow: hidden;
+  padding: 10px 0px;
+  position: absolute;
+  top: 0px;
+  right: -300px;
+  background-color: #fff;
+  width: 300px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease 0.25s;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.12);
+}
+
+ul li a img {
+  transition: all 0.25s ease-in;
+}
+
+.dropdown_active img:last-child,
+.extended-dropdown-active img:last-child {
+  rotate: 180deg;
+  transition: all 0.25s ease-in;
+}
+
 .language-picker {
   vertical-align: bottom;
 }
 .language-picker .test {
   width: 25px;
   height: 25px;
+}
+.language-picker img {
+  display: inline-block !important;
 }
 .language-picker > a {
   display: flex;
@@ -415,7 +450,6 @@ a {
 }
 .language-picker .dropdown_smaller {
   width: 60px;
-  padding: 0px;
 }
 .language-picker .dropdown_smaller .boxes {
   width: 100%;
@@ -473,7 +507,7 @@ a {
   overflow: auto;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1500px) {
   .navbar ul li a {
     margin: 0;
     font-size: 12px;
@@ -482,6 +516,24 @@ a {
   }
   .navbar .right {
     right: 15px;
+  }
+  .language-picker ul li a {
+    margin-top: 10px !important;
+  }
+}
+@media (max-width: 1050px) {
+  .navbar ul li a {
+    margin: 0;
+    font-size: 12px;
+    padding-left: 7px;
+    padding-right: 7px;
+    letter-spacing: 0.2px;
+  }
+  .navbar .right {
+    right: 15px;
+  }
+  .logo {
+    max-width: 185px;
   }
 }
 @media (max-width: 900px) {
@@ -642,6 +694,27 @@ a {
   .dropdown_li_sm .dropdown_smaller .wrapper {
     padding: 0;
   }
+  .sub-menu > a {
+    font-weight: 600 !important;
+  }
+  .dropdown_li_sm .dropdown_smaller .extended-dropdown {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+    top: unset;
+    right: unset;
+    padding: 0;
+    min-height: unset;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease 0.5s;
+    box-shadow: unset;
+    width: unset;
+  }
+  .dropdown_li_sm .dropdown_smaller .extended-dropdown ul li {
+    margin-bottom: 5px;
+  }
   .navbar .for_mobile ul li a {
     color: #fff;
   }
@@ -726,6 +799,17 @@ a {
 .hero .slider:nth-child(odd) .wrapper {
   justify-content: flex-end;
 }
+.hero .slider:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0.4;
+  z-index: 1;
+}
 .hero .slider .slider-background {
   position: absolute;
   inset: 0;
@@ -795,21 +879,14 @@ a {
   .hero .hero-slider .slider {
     min-height: 450px;
   }
-  .hero .hero-slider .slider:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #fff;
-    opacity: 0.5;
-    z-index: 1;
-  }
 }
 @media (max-width: 768px) {
   .hero .slider .wrapper .slider-content {
     padding-left: 20px;
+  }
+  .hero .slider:before {
+    content: "";
+    opacity: 0.5;
   }
 }
 @media (max-width: 500px) {
@@ -875,6 +952,8 @@ a {
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
+  flex-wrap: wrap;
+  row-gap: 30px;
 }
 .what-we-offer .items .item:hover .place-for-img {
   border-color: #e10000;
@@ -909,6 +988,15 @@ a {
   transition-delay: 0.8s;
 }
 .what-we-offer .items .item:nth-child(4) {
+  transition-delay: 1.2s;
+}
+.what-we-offer .items .item:nth-child(6) {
+  transition-delay: 0.4s;
+}
+.what-we-offer .items .item:nth-child(7) {
+  transition-delay: 0.8s;
+}
+.what-we-offer .items .item:nth-child(8) {
   transition-delay: 1.2s;
 }
 .what-we-offer .items .ubrzo-box {
@@ -970,7 +1058,7 @@ a {
 }
 .what-we-offer .items .place-for-img .inside img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 12px;
@@ -1128,7 +1216,7 @@ a {
   height: 25px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .what-we-offer .items {
     flex-wrap: wrap;
   }
@@ -1193,6 +1281,53 @@ a {
     right: 90px;
   }
 }
+.cta {
+  background-color: #404040;
+  padding: 40px 0px;
+  margin-top: 40px;
+}
+.cta .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+
+.cta-left {
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .cta .wrapper {
+    gap: unset;
+    justify-content: space-between;
+  }
+  .cta-left {
+    width: 50%;
+  }
+  .cta-left h3 {
+    font-size: 15px;
+  }
+  .cta-left p {
+    font-size: 12px;
+  }
+  .cta-right {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cta .wrapper {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .cta-left {
+    width: 100%;
+    text-align: center;
+  }
+  .cta-right {
+    width: 100%;
+  }
+}
 .become-agent {
   background-image: url("../img/payspot-pozadina.png");
   background-position: center;
@@ -1212,6 +1347,7 @@ a {
 }
 .agent-top h1 span {
   color: #e10000;
+  display: block;
 }
 .agent-top p {
   margin-bottom: 15px;
@@ -1314,8 +1450,11 @@ a {
     width: 100%;
   }
   .agent-top h1 {
-    font-size: 40px;
-    line-height: 44px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .agent-top h1 span {
+    display: flex;
   }
 }
 @media (max-width: 375px) {
@@ -1324,10 +1463,6 @@ a {
   }
   .become-agent p {
     font-size: 15px;
-  }
-  .agent-top h1 {
-    font-size: 30px;
-    line-height: 34px;
   }
 }
 .about-us {
@@ -1376,6 +1511,16 @@ a {
 .about-us-content .content-box {
   width: calc(33.33% - 20px);
 }
+.about-us-content .content-box > p {
+  margin-bottom: 10px;
+}
+.about-us-content .content-box > p span {
+  color: #e10000;
+  font-weight: 600;
+}
+.about-us-content .content-box > p:last-child {
+  margin-bottom: 0px;
+}
 .about-us-content .content-box:nth-child(2) {
   transition-delay: 200ms;
 }
@@ -1386,7 +1531,10 @@ a {
 .stat-box {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
+}
+.stat-box > p {
+  margin-bottom: 0px !important;
 }
 
 .stat {
@@ -1394,13 +1542,13 @@ a {
   flex-direction: column;
   gap: 7px;
 }
-.stat:nth-child(2) .stat-lines .red-line {
+.stat:nth-child(3) .stat-lines .red-line {
   width: 99%;
 }
-.stat:nth-child(3) .stat-lines .red-line {
+.stat:nth-child(4) .stat-lines .red-line {
   width: 98%;
 }
-.stat:nth-child(4) .stat-lines .red-line {
+.stat:nth-child(5) .stat-lines .red-line {
   width: 96%;
 }
 
@@ -1430,6 +1578,16 @@ a {
   position: relative;
 }
 
+.about-slide {
+  height: 313px;
+}
+.about-slide img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (max-width: 1024px) {
   .about-us-top h2 {
     font-size: 40px;
@@ -1437,6 +1595,9 @@ a {
   }
   .about-us p {
     font-size: 14px;
+  }
+  .about-slide {
+    height: 213px;
   }
 }
 @media (max-width: 768px) {
@@ -1762,7 +1923,7 @@ a {
 }
 .contactSection {
   background-color: #eef6ff;
-  padding: 70px 0;
+  padding: 170px 0px 70px 0px;
 }
 .contactSection .wrapper > p {
   font-size: 15px;
@@ -2005,6 +2166,11 @@ a {
     height: 375px;
   }
 }
+@media screen and (max-width: 900px) {
+  .contactSection {
+    padding: 110px 0px 70px;
+  }
+}
 @media screen and (max-width: 768px) {
   .contactSection .formHolder .moreInfo h2 {
     font-size: 24px;
@@ -2040,6 +2206,23 @@ a {
     margin: auto auto 30px;
   }
 }
+.agent-form {
+  padding: 70px 0px;
+}
+.agent-form h2 {
+  font-size: 40px;
+  line-height: 45px;
+}
+.agent-form h2 span {
+  color: #e10000;
+}
+.agent-form .moreInfo .image {
+  text-align: center;
+}
+.agent-form .contactForm {
+  padding-top: 50px;
+}
+
 .footer {
   background-color: #fff;
 }

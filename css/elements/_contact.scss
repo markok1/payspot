@@ -1,6 +1,6 @@
 .contactSection {
   background-color: $lightbluebg;
-  padding: 70px 0;
+  padding: 170px 0px 70px 0px;
   .wrapper {
     > p {
       font-size: 15px;
@@ -289,7 +289,11 @@
     height: 375px;
   }
 }
-
+@media screen and (max-width: 900px) {
+  .contactSection {
+    padding: 110px 0px 70px;
+  }
+}
 @media screen and (max-width: 768px) {
   .contactSection .formHolder .moreInfo h2 {
     font-size: 24px;

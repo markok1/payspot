@@ -1,0 +1,22 @@
+// agent forma je eksenzija contact css-a
+.agent-form {
+  padding: 70px 0px;
+  h2 {
+    font-size: 40px;
+    line-height: 45px;
+    span {
+      color: $secondary;
+    }
+  }
+  .formHolder .moreInfo:before {
+    // display: none;
+  }
+  .moreInfo {
+    .image {
+      text-align: center;
+    }
+  }
+  .contactForm {
+    padding-top: 50px;
+  }
+}
