@@ -99,8 +99,8 @@
             padding: 10px 30px;
             overflow: hidden;
             text-transform: uppercase;
-            border: 1px solid #086ad8;
-            color: #086ad8;
+            border: 1px solid $secondary;
+            color: $secondary;
             border-radius: 50px;
             background-color: $light;
           }
@@ -111,7 +111,7 @@
             content: "";
             width: 20px;
             height: 20px;
-            background-color: #086ad8;
+            background-color: $secondary;
             border-radius: 50%;
             z-index: -1;
           }
@@ -146,6 +146,7 @@
       width: 50%;
       position: relative;
       padding-left: 20px;
+
       p {
         font-size: 15px;
         text-align: left;
@@ -172,7 +173,7 @@
         left: 0;
         width: 4px;
         height: 100%;
-        background-color: #086ad8;
+        background-color: $secondary;
       }
     }
   }

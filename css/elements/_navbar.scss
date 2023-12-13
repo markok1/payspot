@@ -50,6 +50,9 @@
 }
 .logo {
   max-width: 214px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
 }
 .mobile-topline {
   display: none;

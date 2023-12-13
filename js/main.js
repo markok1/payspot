@@ -10,6 +10,17 @@ $(".navbar .lines").click(function (e) {
   }
 });
 
+$(".for_mobile ul li").click(function (e) {
+  $(".active").removeClass("active");
+  $(this).addClass("active");
+});
+
+$(document).ready(function () {
+  $(".logo").on("click", function (event) {
+    window.location.href = "index-cg.html";
+  });
+});
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();

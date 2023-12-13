@@ -242,6 +242,9 @@ a {
 
 .logo {
   max-width: 214px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .mobile-topline {
@@ -2021,8 +2024,8 @@ ul li a img {
   padding: 10px 30px;
   overflow: hidden;
   text-transform: uppercase;
-  border: 1px solid #086ad8;
-  color: #086ad8;
+  border: 1px solid #e10000;
+  color: #e10000;
   border-radius: 50px;
   background-color: #fff;
 }
@@ -2033,7 +2036,7 @@ ul li a img {
   content: "";
   width: 20px;
   height: 20px;
-  background-color: #086ad8;
+  background-color: #e10000;
   border-radius: 50%;
   z-index: -1;
 }
@@ -2088,7 +2091,7 @@ ul li a img {
   left: 0;
   width: 4px;
   height: 100%;
-  background-color: #086ad8;
+  background-color: #e10000;
 }
 .contactSection .contactFooter .contactLocation {
   display: flex;
@@ -2216,13 +2219,29 @@ ul li a img {
 .agent-form h2 span {
   color: #e10000;
 }
+.agent-form .moreInfo {
+  display: flex;
+  align-items: center;
+}
 .agent-form .moreInfo .image {
   text-align: center;
+  height: 500px;
+}
+.agent-form .moreInfo .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 .agent-form .contactForm {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
+@media (max-width: 550px) {
+  .agent-form .moreInfo .image {
+    text-align: center;
+    height: 300px;
+  }
+}
 .footer {
   background-color: #fff;
 }
