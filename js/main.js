@@ -87,6 +87,10 @@ $(".sub-menu a").click(function (e) {
 $(".uskoro").click(function (e) {
   e.preventDefault();
 });
+$(".uskoro-procitaj-vise").click(function (e) {
+  e.preventDefault();
+});
+
 $(".language-picker a").click(function (e) {
   if ($(window).width() > 900) {
     e.preventDefault();
