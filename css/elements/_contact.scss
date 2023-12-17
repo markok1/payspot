@@ -1,18 +1,7 @@
 .contactSection {
   background-color: $lightbluebg;
   padding: 170px 0px 70px 0px;
-  .wrapper {
-    > p {
-      font-size: 15px;
-      letter-spacing: 2px;
-      text-align: center;
-      margin: auto;
-      margin-bottom: 80px;
-      font-weight: 400;
-      color: $secondary;
-      max-width: 900px;
-    }
-  }
+
   .line {
     width: 200px;
     height: 1px;
@@ -226,6 +215,24 @@
         }
       }
     }
+  }
+}
+.contact-us-top {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 80px;
+  font-weight: 400;
+  color: $secondary;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  p:nth-child(1) {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  p:nth-child(2) {
+    font-size: 12px;
   }
 }
 

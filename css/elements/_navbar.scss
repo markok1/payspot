@@ -112,6 +112,14 @@
           color: $secondary;
         }
       }
+      .sidebar-primary {
+        a {
+          color: $light;
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
     }
     .dropdown_li_sm {
       position: relative;
@@ -482,7 +490,7 @@ ul li a img {
           color: $light;
           font-size: 14px;
         }
-        span {
+        > span {
           color: $light;
           opacity: 0.5;
           font-size: 12px;
@@ -493,6 +501,13 @@ ul li a img {
             span {
               opacity: 1;
             }
+          }
+        }
+        .sidebar-primary {
+          max-width: 135px;
+          a {
+            display: flex;
+            justify-content: center;
           }
         }
       }
@@ -584,7 +599,7 @@ ul li a img {
     }
   }
 
-  .navbar .for_mobile ul li a {
+  .navbar .for_mobile ul li > a {
     color: $light;
   }
 

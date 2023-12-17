@@ -81,7 +81,7 @@
           <div class="for_mobile">
             <ul>
               <li class="active"><a href="index-cg.html">Početna</a></li>
-              <li class="dropdown_li_sm">
+              <li id="usluge-in-view" class="dropdown_li_sm">
                 <a href="#usluge"
                   >Usluge <img src="img/downchevron.svg" alt="Down chevron"
                 /></a>
@@ -190,8 +190,10 @@
                   </div>
                 </div>
               </li>
-              <li><a href="#become-agent">Postanite agent</a></li>
-              <li><a href="#about-us">O nama</a></li>
+              <li id="become-agent-in-view">
+                <a href="#become-agent">Postanite agent</a>
+              </li>
+              <li id="about-us-in-view"><a href="#about-us">O nama</a></li>
               <li><a href="contact-cg.html">Kontakt</a></li>
               <li class="dropdown_li_sm language-picker">
                 <a href="">
@@ -260,7 +262,9 @@
                 <span>Ulica Baku 140, 81110 Podgorica</span>
               </li>
               <li>
-                <div class="primary-button primary-button--secondary-color">
+                <div
+                  class="primary-button primary-button--secondary-color sidebar-primary"
+                >
                   <a href="tel:+38268665301"
                     ><span>
                       <i class="fa-solid fa-phone"></i> + 382 68 665 301</span
@@ -409,7 +413,7 @@
                     <div class="foricon">
                       <i class="fa-solid fa-file-invoice-dollar"></i>
                     </div>
-                    <h3>Transfer novca u zemlji PaySpot ME</h3>
+                    <h3>Transfer novca u zemlji PaySpotNet</h3>
                     <p>Brzo i jednostavno slanje novca u Crnoj Gori</p>
                   </div>
                   <div class="readmore link-primary">
@@ -564,7 +568,7 @@
                     </div>
                     <h3>POS terminali</h3>
                     <p>
-                      jednostavna rešenja za prihvat platnih kartica na vašem
+                      Jednostavna rešenja za prihvat platnih kartica na vašem
                       prodajnom mestu
                     </p>
                   </div>
@@ -673,7 +677,7 @@
                 <i class="fa-solid fa-people-group"></i>
                 <div class="box-content">
                   <h2>Budite deo tima</h2>
-                  <p>Postanite deo uspešnog tima kompanije PaySpot.</p>
+                  <p>Postanite deo uspešnog tima kompanije PaySpot ME.</p>
                 </div>
               </div>
               <div class="agent-box hidden-fadeoff">
@@ -728,8 +732,8 @@
                   ljudi obavljaju platni promet. Započeli smo sa platnim
                   prometom, ali vizionarski gledamo unapred, spremanjem terena
                   za nove usluge koje će obuhvatiti transfer novca u zemlji,
-                  međunarodni transfer novca, uplatu pazara pravnih lica, e –
-                  coomerece, digitalne kanale...
+                  međunarodni transfer novca, uplatu pazara pravnih lica,
+                  e–commerce, digitalne kanale...
                 </p>
                 <p>
                   Bez obzira na proširenje naših usluga, naša posvećenost
@@ -844,10 +848,13 @@
               <span>Timu uspešnih</span>
             </h2>
             <div class="line hidden-fadeoff"></div>
-            <p class="hidden-fadeoff">
-              Postanite PaySpot ovlašćeni agent. Unapredite poslovanje i profit
-              obezbeđujući klijentima mogućnost bržeg I lakšeg plaćanja računa.
-            </p>
+            <div class="contact-us-top">
+              <p class="hidden-fadeoff">
+                Postanite PaySpot ME ovlašćeni agent. Unapredite poslovanje i
+                profit obezbeđujući klijentima mogućnost bržeg I lakšeg plaćanja
+                računa.
+              </p>
+            </div>
             <div class="formHolder hidden-fadeoff">
               <div class="contactForm">
                 <form id="contact-form-id" action="php/mail.php" method="post">
@@ -911,7 +918,7 @@
                     ></textarea>
                   </div>
                   <div class="submit-btn">
-                    <button class="" type="submit">Posaljite poruku</button>
+                    <button class="" type="submit">Pošaljite poruku</button>
                     <p class="form-messege"></p>
                   </div>
                 </form>

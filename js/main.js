@@ -147,3 +147,21 @@ $(".about-us-slider").slick({
     },
   ],
 });
+
+var top1 = $("#usluge").offset().top - 700;
+var top2 = $("#become-agent").offset().top - 700;
+var top3 = $("#about-us").offset().top - 700;
+
+$(".root").scroll(function () {
+  var scrollPos = $(".root").scrollTop();
+  if (scrollPos >= top1 && scrollPos < top2) {
+    $(".active").removeClass("active");
+    $("#usluge-in-view").addClass("active");
+  } else if (scrollPos >= top2 && scrollPos < top3) {
+    $(".active").removeClass("active");
+    $("#become-agent-in-view").addClass("active");
+  } else if (scrollPos >= top3) {
+    $(".active").removeClass("active");
+    $("#about-us-in-view").addClass("active");
+  }
+});
