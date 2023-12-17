@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/animations.js"></script>
   </head>
-  <body>
+  <body class="main-page">
     <div class="everything">
       <div class="topline">
         <div class="wrapper">
@@ -80,7 +80,9 @@
 
           <div class="for_mobile">
             <ul>
-              <li class="active"><a href="index-cg.html">Početna</a></li>
+              <li id="hero-in-view" class="active">
+                <a href="index-cg.html">Početna</a>
+              </li>
               <li id="usluge-in-view" class="dropdown_li_sm">
                 <a href="#usluge"
                   >Usluge <img src="img/downchevron.svg" alt="Down chevron"
@@ -198,7 +200,7 @@
               <li class="dropdown_li_sm language-picker">
                 <a href="">
                   <img
-                    class="test"
+                    class="icon-size"
                     src="img/montenegro-icon.webp"
                     alt="Montenegrin" />
                   <img src="img/downchevron.svg" alt="down chevron"
@@ -278,7 +280,7 @@
       </nav>
 
       <div class="root">
-        <div class="hero">
+        <div id="hero" class="hero">
           <div class="hero-slider">
             <div class="slider">
               <div class="slider-background">
@@ -1055,7 +1057,6 @@
         </div>
       </div>
     </div>
-
     <script defer src="js/main.js"></script>
   </body>
 </html>
