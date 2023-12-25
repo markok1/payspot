@@ -80,9 +80,7 @@
 
           <div class="for_mobile">
             <ul>
-              <li id="hero-in-view" class="active">
-                <a href="index-cg.html">Početna</a>
-              </li>
+              <li id="about-us-in-view"><a href="#about-us">O nama</a></li>
               <li id="usluge-in-view" class="dropdown_li_sm">
                 <a href="#usluge"
                   >Usluge <img src="img/downchevron.svg" alt="Down chevron"
@@ -195,7 +193,6 @@
               <li id="become-agent-in-view">
                 <a href="#become-agent">Postanite agent</a>
               </li>
-              <li id="about-us-in-view"><a href="#about-us">O nama</a></li>
               <li><a href="contact-cg.html">Kontakt</a></li>
               <li class="dropdown_li_sm language-picker">
                 <a href="">
@@ -238,14 +235,14 @@
             <ul class="right">
               <li>
                 <div class="link-primary">
-                  <a href="#">
+                  <a href="under-construction.html">
                     <i class="fa-solid fa-map-location-dot"></i> Lokator</a
                   >
                 </div>
               </li>
               <li>
                 <div class="link-primary">
-                  <a href="#">
+                  <a href="under-construction.html">
                     <i class="fa-solid fa-calculator"></i>
                     Kalkulator</a
                   >
@@ -374,7 +371,7 @@
                     <img
                       loading="lazy"
                       src="img/platni-promet.webp"
-                      alt="Women holding a taxfree sign and a paper"
+                      alt="Women paying the bills"
                     />
                   </div>
                 </div>
@@ -651,7 +648,8 @@
                 <div class="box-content">
                   <h2>Bez ulaganja</h2>
                   <p>
-                    PaySpot vam obezbeđuje kompletnu tehničku podršku besplatno.
+                    PaySpot ME vam obezbeđuje kompletnu tehničku podršku
+                    besplatno.
                   </p>
                 </div>
               </div>
@@ -734,8 +732,8 @@
                   ljudi obavljaju platni promet. Započeli smo sa platnim
                   prometom, ali vizionarski gledamo unapred, spremanjem terena
                   za nove usluge koje će obuhvatiti transfer novca u zemlji,
-                  međunarodni transfer novca, uplatu pazara pravnih lica,
-                  e–commerce, digitalne kanale...
+                  međunarodni transfer novca, uplatu pazara pravnih lica i
+                  preduzetnika, e–commerce, digitalne kanale...
                 </p>
                 <p>
                   Bez obzira na proširenje naših usluga, naša posvećenost
@@ -859,7 +857,11 @@
             </div>
             <div class="formHolder hidden-fadeoff">
               <div class="contactForm">
-                <form id="contact-form-id" action="php/mail.php" method="post">
+                <form
+                  id="contact-form-id"
+                  action="php/contact.php"
+                  method="post"
+                >
                   <div class="firstRowForm">
                     <input
                       name="con_name"
@@ -1058,5 +1060,16 @@
       </div>
     </div>
     <script defer src="js/main.js"></script>
+    <script>
+      // Check if there is a target section in the URL
+      window.onload = function () {
+        if (window.location.hash === "#postani-agent") {
+          // Scroll the target section into view after the page loads
+          document
+            .getElementById("become-agent")
+            .scrollIntoView({ behavior: "smooth" });
+        }
+      };
+    </script>
   </body>
 </html>

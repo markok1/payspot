@@ -42,7 +42,8 @@
   justify-content: space-between;
   margin-bottom: 100px;
   .content-box {
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 17px);
+    text-align: justify;
     > p {
       margin-bottom: 10px;
       span {
@@ -159,6 +160,7 @@
     .content-box {
       width: 100%;
       margin-bottom: 20px;
+      text-align: left;
     }
   }
 }

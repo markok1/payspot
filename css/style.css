@@ -758,6 +758,11 @@ ul li a img {
     display: none;
   }
 }
+.under-construction {
+  padding-top: 180px;
+  text-align: center;
+}
+
 .hero {
   overflow: hidden;
 }
@@ -1525,7 +1530,8 @@ ul li a img {
   margin-bottom: 100px;
 }
 .about-us-content .content-box {
-  width: calc(33.33% - 20px);
+  width: calc(33.33% - 17px);
+  text-align: justify;
 }
 .about-us-content .content-box > p {
   margin-bottom: 10px;
@@ -1624,6 +1630,7 @@ ul li a img {
   .about-us-content .content-box {
     width: 100%;
     margin-bottom: 20px;
+    text-align: left;
   }
 }
 @media (max-width: 600px) {
@@ -2444,10 +2451,13 @@ ul li a img {
   right: 0px;
   width: 50%;
   height: 100%;
-  background-image: url("../img/usluga-platni-promet-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.service-platni-promet {
+  background-image: url("../img/platni-promet-bg.webp");
 }
 
 .cta-bottom {

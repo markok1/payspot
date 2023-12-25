@@ -47,10 +47,13 @@
   right: 0px;
   width: 50%;
   height: 100%;
-  background-image: url("../img/usluga-platni-promet-bg.png");
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.service-platni-promet {
+  background-image: url("../img/platni-promet-bg.webp");
 }
 .cta-bottom {
   position: relative;
