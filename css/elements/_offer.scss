@@ -119,6 +119,24 @@
         transition: all ease-in-out 0.5s;
       }
     }
+    .soon-box {
+      position: relative;
+      &::after {
+        content: "SOON!";
+        position: absolute;
+        top: 12px;
+        right: 0;
+        color: $light;
+        background-color: $primary;
+        border-radius: 5px 0px 0px 5px;
+        padding: 5px 10px;
+        transition: all ease-in-out 0.5s;
+      }
+      &:hover::after {
+        background-color: $secondary;
+        transition: all ease-in-out 0.5s;
+      }
+    }
     .place-for-img {
       border-radius: 12px;
       overflow: hidden;

@@ -207,6 +207,7 @@
           }
         }
       }
+
       .uskoro {
         width: 90%;
         &::after {
@@ -225,6 +226,15 @@
         &:hover {
           &::after {
             content: "USKORO!";
+            width: 100%;
+            transition: all ease 0.25s;
+          }
+        }
+      }
+      .uskoro-eng {
+        &:hover {
+          &::after {
+            content: "SOON!";
             width: 100%;
             transition: all ease 0.25s;
           }

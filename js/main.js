@@ -10,10 +10,10 @@ $(".navbar .lines").click(function (e) {
   }
 });
 
-$(".for_mobile ul li").click(function (e) {
-  $(".active").removeClass("active");
-  $(this).addClass("active");
-});
+// $(".for_mobile ul li").click(function (e) {
+//   $(".active").removeClass("active");
+//   $(this).addClass("active");
+// });
 
 $(document).ready(function () {
   $(".logo").on("click", function (event) {
@@ -89,12 +89,6 @@ $(".uskoro").click(function (e) {
 });
 $(".uskoro-procitaj-vise").click(function (e) {
   e.preventDefault();
-});
-
-$(".language-picker a").click(function (e) {
-  if ($(window).width() > 900) {
-    e.preventDefault();
-  }
 });
 
 $(".root").scroll(function () {
