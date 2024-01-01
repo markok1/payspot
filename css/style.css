@@ -1968,7 +1968,6 @@ ul li a img {
   }
 }
 .contactSection {
-  background-color: #eef6ff;
   padding: 170px 0px 70px 0px;
 }
 .contactSection .line {
@@ -2000,6 +1999,9 @@ ul li a img {
   max-width: 500px;
   margin: auto;
 }
+.contactSection .formHolder .contactForm #contact-form-id input {
+  font-size: 15px;
+}
 .contactSection .formHolder .contactForm #contact-form-id .firstRowForm {
   display: flex;
   gap: 20px;
@@ -2011,11 +2013,11 @@ ul li a img {
   margin-bottom: 20px;
   width: 100%;
   background-color: #fff;
-  border: 1px solid transparent;
-  transition: all 0.5s ease-in;
+  border: 1px solid #404040;
+  transition: all 0.25s ease-in;
 }
 .contactSection .formHolder .contactForm #contact-form-id .firstRowForm input:focus {
-  border: 1px solid #086ad8;
+  border: 1px solid #e10000;
 }
 .contactSection .formHolder .contactForm #contact-form-id .secondRowForm {
   display: flex;
@@ -2027,11 +2029,11 @@ ul li a img {
   margin-bottom: 20px;
   width: 100%;
   background-color: #fff;
-  border: 1px solid transparent;
-  transition: all 0.5s ease-in;
+  border: 1px solid #404040;
+  transition: all 0.25s ease-in;
 }
 .contactSection .formHolder .contactForm #contact-form-id .secondRowForm input:focus {
-  border: 1px solid #086ad8;
+  border: 1px solid #e10000;
 }
 .contactSection .formHolder .contactForm #contact-form-id .contact-message {
   width: 100%;
@@ -2045,11 +2047,14 @@ ul li a img {
   min-height: 100px;
   font-family: "Poppins";
   background-color: #fff;
-  border: 1px solid transparent;
-  transition: all 0.5s ease-in;
+  border: 1px solid #404040;
+  transition: all 0.25s ease-in;
+  font-size: 15px;
+  resize: none;
 }
 .contactSection .formHolder .contactForm #contact-form-id .contact-message textarea:focus {
-  border: 1px solid #086ad8;
+  border: 1px solid #e10000;
+  outline: none;
 }
 .contactSection .formHolder .contactForm #contact-form-id .submit-btn button {
   cursor: pointer;
@@ -2189,7 +2194,8 @@ ul li a img {
   letter-spacing: 2px;
 }
 .contact-us-top p:nth-child(2) {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 @keyframes criss-cross-left {
   0% {

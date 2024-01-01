@@ -1,5 +1,5 @@
 .contactSection {
-  background-color: $lightbluebg;
+  // background-color: $lightbluebg;
   padding: 170px 0px 70px 0px;
 
   .line {
@@ -30,6 +30,9 @@
         flex-direction: column;
         max-width: 500px;
         margin: auto;
+        input {
+          font-size: 15px;
+        }
         .firstRowForm {
           display: flex;
           gap: 20px;
@@ -40,10 +43,11 @@
             margin-bottom: 20px;
             width: 100%;
             background-color: $light;
-            border: 1px solid transparent;
-            transition: all 0.5s ease-in;
+            border: 1px solid $primary;
+            transition: all 0.25s ease-in;
+
             &:focus {
-              border: 1px solid #086ad8;
+              border: 1px solid $secondary;
             }
           }
         }
@@ -56,10 +60,10 @@
             margin-bottom: 20px;
             width: 100%;
             background-color: $light;
-            border: 1px solid transparent;
-            transition: all 0.5s ease-in;
+            border: 1px solid $primary;
+            transition: all 0.25s ease-in;
             &:focus {
-              border: 1px solid #086ad8;
+              border: 1px solid $secondary;
             }
           }
         }
@@ -74,10 +78,13 @@
             min-height: 100px;
             font-family: "Poppins";
             background-color: $light;
-            border: 1px solid transparent;
-            transition: all 0.5s ease-in;
+            border: 1px solid $primary;
+            transition: all 0.25s ease-in;
+            font-size: 15px;
+            resize: none;
             &:focus {
-              border: 1px solid #086ad8;
+              border: 1px solid $secondary;
+              outline: none;
             }
           }
         }
@@ -232,7 +239,8 @@
     letter-spacing: 2px;
   }
   p:nth-child(2) {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
   }
 }
 
