@@ -2422,6 +2422,13 @@ ul li a img {
   .footer_top .box:last-child {
     margin-bottom: 0;
   }
+  .footer_link {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_link a {
+    max-width: 300px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .footer_top {

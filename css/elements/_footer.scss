@@ -7,12 +7,7 @@
   }
   .link-primary {
     a {
-      background-image: linear-gradient(
-        to right,
-        $light,
-        $light 50%,
-        $light 50%
-      );
+      background-image: linear-gradient(to right, $light, $light 50%, $light 50%);
     }
   }
 }
@@ -130,6 +125,13 @@
 
   .footer_top .box:last-child {
     margin-bottom: 0;
+  }
+  .footer_link {
+    display: flex;
+    flex-direction: column;
+    a {
+      max-width: 300px;
+    }
   }
 }
 @media only screen and (max-width: 600px) {
