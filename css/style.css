@@ -2392,6 +2392,18 @@ ul li a img {
   font-size: 14px;
   font-weight: 600;
 }
+.footer_top .partners .footer_link {
+  text-align: left;
+}
+.footer_top .partners .footer_link a {
+  max-width: 200px;
+  height: 80px;
+}
+.footer_top .partners .footer_link a img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 @media only screen and (max-width: 1450px) {
   .footer_top .box {
@@ -2427,7 +2439,7 @@ ul li a img {
     flex-direction: column;
   }
   .footer_link a {
-    max-width: 300px;
+    max-width: 200px;
   }
 }
 @media only screen and (max-width: 600px) {
