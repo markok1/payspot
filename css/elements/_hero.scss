@@ -59,11 +59,11 @@
     display: flex;
     align-items: center;
     min-height: 700px;
-    &:nth-child(odd) {
-      .wrapper {
-        justify-content: flex-end;
-      }
+
+    .justify-content-end {
+      justify-content: flex-end;
     }
+
     &:before {
       content: "";
       position: absolute;

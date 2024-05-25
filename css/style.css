@@ -822,7 +822,7 @@ ul li a img {
   align-items: center;
   min-height: 700px;
 }
-.hero .slider:nth-child(odd) .wrapper {
+.hero .slider .justify-content-end {
   justify-content: flex-end;
 }
 .hero .slider:before {
