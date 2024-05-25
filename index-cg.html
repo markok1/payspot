@@ -35,8 +35,8 @@
           </div>
           <div class="topline-right">
             <div class="primary-button primary-button--secondary-color">
-              <a href="tel:+38268665301"
-                ><span> <i class="fa-solid fa-phone"></i> + 382 68 665 301</span></a
+              <a href="+38268885301"
+                ><span> <i class="fa-solid fa-phone"></i> +382 68 885 301</span></a
               >
             </div>
           </div>
@@ -152,7 +152,7 @@
             <ul class="right">
               <li>
                 <div class="link-primary">
-                  <a href="under-construction.html"> <i class="fa-solid fa-map-location-dot"></i> Lokator</a>
+                  <a href="doc/Crna-Gora-lokacije.pdf" target="_blank"> <i class="fa-solid fa-map-location-dot"></i> Lokator</a>
                 </div>
               </li>
               <li>
@@ -177,8 +177,8 @@
               </li>
               <li>
                 <div class="primary-button primary-button--secondary-color sidebar-primary">
-                  <a href="tel:+38268665301"
-                    ><span> <i class="fa-solid fa-phone"></i> + 382 68 665 301</span></a
+                  <a href="+38268885301"
+                    ><span> <i class="fa-solid fa-phone"></i> +382 68 885 301</span></a
                   >
                 </div>
               </li>
@@ -284,7 +284,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item ubrzo-box hidden-fadeoff">
+              <div class="item hidden-fadeoff">
                 <div class="place-for-img">
                   <div class="forhover">
                     <div class="line"></div>
@@ -305,7 +305,32 @@
                     <p>Brzo i jednostavno slanje novca u Crnoj Gori</p>
                   </div>
                   <div class="readmore link-primary">
-                    <a class="uskoro-procitaj-vise" href="#">Pročitaj više</a>
+                    <a href="usluga-slanje-novca-u-zemlji-cg.html">Pročitaj više</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item hidden-fadeoff">
+                <div class="place-for-img">
+                  <div class="forhover">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                  </div>
+                  <div class="inside">
+                    <img loading="lazy" src="img/uplata-pazara.webp" alt="Zena preprojava novac" />
+                  </div>
+                </div>
+                <div class="cont">
+                  <div class="content-holder">
+                    <div class="foricon">
+                      <i class="fa-solid fa-money-bill-1-wave"></i>
+                    </div>
+                    <h3>Uplata pazara</h3>
+                    <p>Brza i jednostavna uplata pazara pravnih lica</p>
+                  </div>
+                  <div class="readmore link-primary">
+                    <a href="usluga-uplata-pazara-cg.html">Pročitaj više</a>
                   </div>
                 </div>
               </div>
@@ -385,31 +410,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item ubrzo-box hidden-fadeoff">
-                <div class="place-for-img">
-                  <div class="forhover">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                  </div>
-                  <div class="inside">
-                    <img loading="lazy" src="img/uplata-pazara.webp" alt="Zena preprojava novac" />
-                  </div>
-                </div>
-                <div class="cont">
-                  <div class="content-holder">
-                    <div class="foricon">
-                      <i class="fa-solid fa-money-bill-1-wave"></i>
-                    </div>
-                    <h3>Uplata pazara</h3>
-                    <p>Brza i jednostavna uplata pazara pravnih lica</p>
-                  </div>
-                  <div class="readmore link-primary">
-                    <a class="uskoro-procitaj-vise" href="#">Pročitaj više</a>
-                  </div>
-                </div>
-              </div>
+
               <div class="item ubrzo-box hidden-fadeoff">
                 <div class="place-for-img">
                   <div class="forhover">
@@ -467,7 +468,7 @@
         <div id="become-agent" class="become-agent">
           <div class="wrapper">
             <div class="agent-top">
-              <p class="subtitle hidden-fadeoff">Možemo unaprediti vaš biznis</p>
+              <p class="subtitle hidden-fadeoff">Možemo unaprijediti vaš biznis</p>
               <h1 class="hidden-fadeoff">
                 Postanite naš Agent i otvorite
                 <span>put ka finansijskom uspjehu! </span>
@@ -630,29 +631,29 @@
             </div>
             <div class="formHolder hidden-fadeoff">
               <div class="contactForm">
-                <form id="contact-form-id" action="php/contact.php" method="post">
+                <form id="contact-form-id" class="quote-form-inputs" method="post">
                   <div class="firstRowForm">
-                    <input name="con_name" type="text" placeholder="Unesite vaše ime *" required="required" />
-                    <input name="con_city" type="text" placeholder="Unesite vaš grad *" required="required" />
+                    <input class="agent-name" name="con_name" type="text" placeholder="Unesite vaše ime *" required="required" />
+                    <input class="agent-city" name="con_city" type="text" placeholder="Unesite vaš grad *" required="required" />
                   </div>
                   <div class="secondRowForm">
-                    <input name="con_adress" type="text" placeholder="Vaša adresa *" required="required" />
+                    <input class="agent-adress" name="con_adress" type="text" placeholder="Vaša adresa *" required="required" />
                   </div>
                   <div class="firstRowForm">
-                    <input name="con_post" type="text" placeholder="Poštanski broj *" required="required" />
-                    <input name="con_phone" type="tel" placeholder="Telefon *" required="required" />
+                    <input class="agent-zip" name="con_post" type="text" placeholder="Poštanski broj *" required="required" />
+                    <input class="agent-phone" name="con_phone" type="tel" placeholder="Telefon *" required="required" />
                   </div>
                   <div class="secondRowForm">
-                    <input name="con_email" type="email" placeholder="Vaš Email *" required="required" />
+                    <input class="agent-email" name="con_email" type="email" placeholder="Vaš Email *" required="required" />
                   </div>
                   <div class="secondRowForm">
-                    <input name="con_email" type="email" placeholder="PIB/Matični broj vaše firme*" required />
+                    <input class="agent-pib" name="con_pib" type="text" placeholder="PIB/Matični broj vaše firme*" required />
                   </div>
                   <div class="contact-message">
-                    <textarea name="con_message" placeholder="Unesite vašu poruku *" required></textarea>
+                    <textarea class="agent-message" name="con_message" placeholder="Unesite vašu poruku *" required></textarea>
                   </div>
                   <div class="submit-btn">
-                    <button class="" type="submit">Pošaljite poruku</button>
+                    <button class="form-submit" type="submit">Pošaljite poruku</button>
                     <p class="form-messege"></p>
                   </div>
                 </form>
@@ -674,7 +675,7 @@
                 <h2>Platna institucija PAYSPOT ME</h2>
                 <p>Prioritet nam je vaše zadovoljstvo: Korisnici dobijaju efikasne i sigurne finansijske usluge, a saradnici partnerstvo koje donosi rast i prosperitet.</p>
                 <div class="link-primary">
-                  <a href="tel:+38268665301"><i class="fa-solid fa-phone"></i> + 382 68 665 301</a>
+                  <a href="+38268885301"><i class="fa-solid fa-phone"></i> +382 68 885 301</a>
                 </div>
                 <div class="link-primary">
                   <a href="mailto:office@payspot.me"><i class="fa-regular fa-envelope"></i> office@payspot.me</a>
@@ -704,43 +705,28 @@
               <div class="box hidden-fadeoff">
                 <h2>Dokumentacija</h2>
                 <div class="link-primary footer_link">
-                  <a href="">Dokumentacija</a>
+                  <a href="doc/Zahtev-za-podnošenje-prigovora.pdf" target="_blank">Zahtev za podnošenje prigovora</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Dokumentacija1</a>
+                  <a href="doc/Obaveštenje-o-načinu-postupanja-po-prigovoru.pdf" target="_blank">Obaveštenje o načinu postupanja po prigovoru</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Dokumentacija2</a>
+                  <a href="doc/Obaveštenje-o-zaštiti-podataka-o-ličnosti-CG.pdf" target="_blank">Obaveštenje o zaštiti podataka o ličnosti CG</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Dokumentacija3</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Dokumentacija4</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Dokumentacija5</a>
+                  <a href="doc/Opšti-uslovi-za-pružanje-platnih-usluga-Payspot-ME.pdf" target="_blank">Opšti uslovi za pružanje platnih usluga Payspot ME</a>
                 </div>
               </div>
               <div class="box hidden-fadeoff">
                 <h2>Dokumentacija</h2>
                 <div class="link-primary footer_link">
-                  <a href="">Dokumentacija</a>
+                  <a href="doc/P012a-Uslovi-izvršenja-novčane-doznake-CG-PaySpotNet.pdf" target="_blank">P012a Uslovi izvršenja novčane doznake CG PaySpotNet</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Dokumentacija</a>
+                  <a href="doc/Tarifa-PS-ME.pdf" target="_blank">Tarifa PS ME</a>
                 </div>
                 <div class="link-primary footer_link">
-                  <a href="">Dokumentacija</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Dokumentacija</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Dokumentacija</a>
-                </div>
-                <div class="link-primary footer_link">
-                  <a href="">Dokumentacija</a>
+                  <a href="doc/Terminski-plan.pdf" target="_blank">Terminski plan</a>
                 </div>
               </div>
             </div>
