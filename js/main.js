@@ -234,40 +234,48 @@ $(document).ready(function () {
         name: $(".contact-name").val(),
         email: $(".contact-email").val(),
         subject: $(".contact-subject").val(),
-        message: $(".contact-message").val(),
+        message: $(".contact-message-box").val(),
       };
       console.log(contact_form);
 
       // if (captchaResponse.length > 0) {
       $.ajax({
         type: "POST",
-        url: "../php/contact-us.php",
+        url: "php/contact-us.php", // Ensure the URL is correct relative to index.html
         data: contact_form,
         dataType: "json",
-        success: function (data) {
-          if (data.status == "success") {
-            return true;
+        success: function (response) {
+          console.log("AJAX Response:", response); // Log success response
+
+          if (response.status === "success") {
+            alert("Form submitted successfully!");
+          } else {
+            alert("Error: " + response.message);
           }
         },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error("AJAX Error:", textStatus, errorThrown); // Log any AJAX errors
+          console.log("Response Text:", jqXHR.responseText); // Log the response text
+          alert("An error occurred while submitting the form. Please try again.");
+        },
       });
-      $(".quote-form-inputs input").each(function (index) {
-        $(this).val("");
-      });
-      $(".quote-form-inputs textarea").val("");
+      // Clear form inputs
+      $(".quote-form-inputs-contact input").val("");
+      $(".quote-form-inputs-contact textarea").val("");
 
       // location.reload();
       // } else {
       //   $(".recap-div").addClass("recap-div_active");
       // }
     } else {
-      $(".quote-form-inputs input").each(function (index) {
+      $(".quote-form-inputs-contact input").each(function (index) {
         if (!$(this)[0].validity.valid) {
           $(this).css("border", "1px solid red");
         } else {
           $(this).css("border", "1px solid #404040");
         }
       });
-      if (!$(".quote-form-inputs textarea")[0].validity.valid) {
+      if (!$(".quote-form-inputs-contact textarea")[0].validity.valid) {
         $(".quote-form-inputs textarea").css("border", "1px solid red");
       } else {
         $(this).css("border", "1px solid #404040");
