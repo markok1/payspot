@@ -17,7 +17,7 @@ $(".navbar .lines").click(function (e) {
 
 $(document).ready(function () {
   $(".logo").on("click", function (event) {
-    window.location.href = "index-cg.html";
+    window.location.href = "index.html";
   });
 });
 

@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 header('Content-Type: application/json');
 
-$mailto = "markokostic96@gmail.com";  // My email address
+$mailto = "office@payspot.me";  // My email address
 $fromEmail = $_POST['email'];  // Ensure this is set
 
 // Getting customer data
