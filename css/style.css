@@ -153,6 +153,11 @@ a {
     height: 375px;
   }
 }
+.plain-link {
+  text-decoration: none;
+  color: #e10000;
+}
+
 .link-primary {
   text-align: center;
 }
@@ -2544,6 +2549,9 @@ ul li a img {
   .services-hero-left .services-content h1 {
     font-size: 45px;
     line-height: 49px;
+  }
+  .services-hero-left ul {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 900px) {
